@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "REST API for FinanceApp",
   "main": "./src/index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "docker-install": "docker compose -f docker.compose.dev.yml up -d",
-    "dev": "docker start finance_app_postgres && docker start finance_app_redis && nodemon - exec 'ts-node' src/index.ts &",
+    "dev": "nodemon src/index.ts",
     "docker-start": "docker start finance_app_postgres && docker start finance_app_redis"
   },
   "author": "iam7kei",
@@ -14,5 +15,5 @@
   "dependencies": {
     "express": "^4.21.2",
     "nodemon": "^3.1.9"
-  }
+    }
 }
