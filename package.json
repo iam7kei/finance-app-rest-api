@@ -8,11 +8,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "docker-install": "docker compose -f docker.compose.dev.yml up -d",
     "dev": "nodemon src/index.ts",
-    "docker-start": "docker start finance_app_postgres && docker start finance_app_redis"
+    "docker-start": "docker start finance_app_postgres && docker start finance_app_redis",
+    "build": "webpack"
   },
   "author": "iam7kei",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.3",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "knex": "^3.1.0",
