@@ -2,5 +2,5 @@ CREATE TABLE IF NOT EXISTS banks(
 	id SERIAL PRIMARY KEY,
 	name VARCHAR(100),
 	type VARCHAR(10) CHECK (type IN ('SAVINGS', 'CHECKING')) DEFAULT 'SAVINGS',
-	amount numeric DEFAULT 0
+	amount float4 DEFAULT 0
 )
