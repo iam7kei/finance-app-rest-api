@@ -2,12 +2,12 @@ import "dotenv/config";
 import routes from "./api/routes.js"
 import express from "express"
 import bodyParser from "body-parser";
-import {getTimeNow } from "./services/db.js";
+import cors from "cors";
 const app = express();
 const port = 3000;
 
-getTimeNow();
-
+app.use(cors());
+app.options("*", cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use("/", routes);
