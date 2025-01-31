@@ -1,6 +1,10 @@
-# Checklist
+# Phase 1
 - [ ] Add services
-   - [ ] Create
-   - [ ] Read
+   - [X] Create
+   - [X] Read
    - [ ] Update
    - [ ] Delete
+
+# Phase 2
+- [ ] Add middleware
+   - [ ] Auth
